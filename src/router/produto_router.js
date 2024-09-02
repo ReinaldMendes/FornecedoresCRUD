@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const produto_controllers = require("../controllers/produto_controllers.js");
+
 router.post("/", (req, res) => {
   const produto = req.body;
   const code = produto_controllers.store(produto);
